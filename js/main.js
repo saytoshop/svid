@@ -11,9 +11,6 @@ $(document).ready(function() {
 
     function onScroll() {
         var scroll_top = $(document).scrollTop() + 100;
-        if (scroll_top > 200) {
-            $(".topmenu").addClass("shadow");
-        } else $(".topmenu").removeClass("shadow");
         $(menu_selector + " a").each(function() {
             var hash = $(this).attr("href");
             if (hash == "#") return;
@@ -25,6 +22,11 @@ $(document).ready(function() {
                 $(this).addClass("active");
             } else {
                 $(this).removeClass("active");
+            }
+            if (scroll_top > 100) {
+              $('header').removeClass("onBack");
+            } else {
+              $('header').addClass("onBack");
             }
         });
 
@@ -44,7 +46,7 @@ $(document).ready(function() {
         var target = $(hash);
 
         $("html, body").animate({
-            scrollTop: target.offset().top - 100
+            scrollTop: target.offset().top - 200
         }, 500, function() {
      //       window.location.hash = hash;
             $(document).on("scroll", onScroll);
@@ -63,6 +65,19 @@ $(document).ready(function() {
     });
     $(".menu_element a").click(function(e) {
         $(".topmenu_elements").removeClass("open");
+    });
+    $(".layer").click(function(e) {
+        $(this).addClass("hidden")
+        .closest(".element")
+        .find(".thumb")
+        .removeClass("active");
+    });
+    $(".thumb").click(function(e) {
+      $(this).siblings().removeClass("active");
+      $(this).addClass("active");
+        $(this).closest(".element")
+          .find(".layer").removeClass("hidden")
+          .find("img").attr("src",$(this).data("full"));
     });
 
 });
