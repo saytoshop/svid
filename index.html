@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/main.css">
+      <title></title>
+      <meta name="description" content="">
+      <script src="js/jquery-1.12.4.min.js" charset="utf-8"></script>
+      <script src="js/main.js" charset="utf-8"></script>
+      <script type="text/javascript">
+          function loadFont(a, b, c, d) {
+              function e() {
+                  if (!window.FontFace) return !1;
+                  var a = new FontFace("t", 'url("data:application/font-woff2,") format("woff2")', {}),
+                      b = a.load();
+                  try {
+                      b.then(null, function() {})
+                  } catch (c) {}
+                  return "loading" === a.status
+              }
+              var f = navigator.userAgent,
+                  g = !window.addEventListener || f.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/) && !f.match(/Chrome/);
+              if (!g) {
+                  var h = {};
+                  try {
+                      h = localStorage || {}
+                  } catch (i) {}
+                  var j = "x-font-" + a,
+                      k = j + "url",
+                      l = j + "css",
+                      m = h[k],
+                      n = h[l],
+                      o = document.createElement("style");
+                  if (o.rel = "stylesheet", document.head.appendChild(o), !n || m !== b && m !== c) {
+                      var p = c && e() ? c : b,
+                          q = new XMLHttpRequest;
+                      q.open("GET", p), q.onload = function() {
+                          q.status >= 200 && q.status < 400 && (h[k] = p, h[l] = q.responseText, d || (o.textContent = q.responseText))
+                      }, q.send()
+                  } else o.textContent = n
+              }
+          }
+          loadFont('TT Prosto Sans', 'css/tt-prosto-sans.css');
+      </script>
+  </head>
+
+  <body>
+    <header>
+        <div class="topmenu content">
+            <div class="brand" onclick="window.scrollTo(0,10);window.location.hash = ''">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="topmenu_elements">
+                <div class="menu_closer"><img class="close_menu" src="img/cross.png" alt=""></div>
+                <div class="menu_element"><a href="#about" class="">О нас</a></div>
+                <div class="menu_element"><a href="#where">Каталог</a></div>
+                <div class="menu_element"><a href="#delivery">Доставка</a></div>
+                <div class="menu_element"><a href="#contacts">Контакты</a></div>
+            </div>
+        </div>
+    </header>
+    <section>
+      <img class="mainImage" src="" alt="">
+      <div class="mainText content">
+
+        <h2>Детские игровые площадки</h2>
+          <p>Любимое место большинства малышей — это увлекательная детская площадка. Компания «Свидъ» предлагает качественные детские площадки морской тематики из дерева, выполненные на заказ. Мы занимаемся производством из дерева интересных городков, домиков, крепостей и кораблей. В нашем ассортименте представлены безопасные, проверенные временем и оригинально оформленные элементы, которые непременно понравятся Вашим детям и прослужат долгие годы.
+          На оборудованном уличном комплексе ребёнок играя получает море положительных эмоций, гармонично развивается физически и социально. Кроме того, профессионально оформленная конструкция органично вписывается в любой ландшафт.
+          </p>
+          <h2>Продукция марки «Свидъ» — результат слаженной работы команды профессионалов:</h2>
+          <ul>
+            <li>художников, обладающих отличным чувством прекрасного;</li>
+            <li>конструкторов, которые знают, как придать надёжность и функциональность конструкциям;</li>
+            <li>мастеров, умеющих работать с натуральным деревом.</li>
+          </ul>
+          <h2>Исполнение мечты</h2>
+          <p>Кто из малышей не мечтал побывать в роли отважного капитана корабля или поучаствовать в героическом взятии крепости? Мечту ребёнка, волшебство вполне возможно осуществить.</p>
+          <h2>Принципы</h2>
+          <p>В производстве уличных конструкций мы придерживаемся следующих принципов:</p>
+          <ul>
+            <li>Эстетичность. Детские игровые комплексы из дерева — результат усердного труда дизайнеров и художников, которые мастерски создают прекрасные вещи, приятные на вид. Красивое окружение формируют хороший вкус у ребёнка с раннего возраста, помогая ему развиваться духовно и творчески;</li>
+            <li>Безопасность. В процессе разработки комплекса строго соблюдаются все требования нормативов, принятых в этой сфере производства. Мастера учитывают малейшие тонкости изготовления деревянных игровых площадок для детей. Это обеспечивает удобство в использовании и предотвращает любые негативные последствия;</li>
+            <li>Экологичность. Для производства площадок используются дерево - сибирская лиственница. Древесина лиственницы обладает уникальным свойством - она устойчива к воздействию вредителей и не нуждается в обработке химикатами.</li>
+          </ul>
+      </div>
+      <div class="mainFooter">
+        <div class="images">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+        </div>
+        <div class="buttons">
+          <div class="button">
+            <a href="#">Хит продаж!</a>
+          </div>
+          <div class="button">
+            <a href="#">Хит продаж!</a>
+          </div>
+          <div class="button">
+            <a href="#">Хит продаж!</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section id="about">
+
+    </section>
+    <section id="where">
+
+    </section>
+    <section id="delivery">
+
+    </section>
+    <section id="contacts">
+
+    </section>
+  </body>
+</html>
