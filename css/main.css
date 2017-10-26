@@ -2,7 +2,7 @@ body {
     max-width: 1360px;
     margin: auto;
     overflow-x: hidden;
-    font-family: "Museo Sans Cyrl -500";
+    font-family: "Museo Sans Cyrl 500";
     padding-top: 125px;
 }
 
@@ -47,6 +47,7 @@ p {
     font-size: 28px;
     text-align: left;
     line-height: 40px;
+    font-family: "Museo Sans Cyrl 900";
 }
 
 .content h3 {
@@ -54,6 +55,8 @@ p {
     font-size: 80px;
     line-height: 80px;
     margin-top: 150px;
+    font-family: "Museo Sans Cyrl 900";
+
 }
 
 .topmenu {
@@ -119,6 +122,7 @@ p {
     padding: 10px 5px;
     display: block;
     font-size: 31px;
+    font-family: "Museo Sans Cyrl 700";
 }
 
 .caption {
@@ -148,6 +152,7 @@ p {
     margin-left: 120px;
     padding: 0 10px;
     align-self: baseline;
+    font-family: "Museo Sans Cyrl 900";
 }
 
 .element {
@@ -186,12 +191,13 @@ p {
 }
 
 .elementCaption {
-    /*font-family: "Museo Sans Cyrl -900";*/
+    font-family: "Museo Sans Cyrl 900";
     font-size: 83px;
+    /* FIXME: shadow */
 }
 
 .elementsSmall .elementCaption {
-    /*font-family: "Museo Sans Cyrl -900";*/
+    font-family: "Museo Sans Cyrl 900";
     font-size: 53px;
 }
 
@@ -201,6 +207,7 @@ p {
     background-color: #009e12;
     max-width: 780px;
     padding: 13px 16px;
+    font-family: "Museo Sans Cyrl 700";
 }
 
 .elementThumbs {
@@ -289,11 +296,13 @@ p {
 margin: 0;
 line-height: 71px;
 margin-bottom: 50px;
+font-family: "Museo Sans Cyrl 900";
 }
 
 .offices {
     display: flex;
     justify-content: space-between;
+
 }
 .office.china {
     margin-right: 140px;
@@ -306,6 +315,7 @@ margin-bottom: 50px;
   font-weight: 600;
   line-height: 50px;
   margin-bottom: 30px;
+  font-family: "Museo Sans Cyrl 700";
 }
 
 .location {
