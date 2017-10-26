@@ -1,3 +1,9 @@
+HTML {
+    /*   background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-image: url( '../img/pp.png' );*/
+}
+
 body {
     max-width: 1360px;
     margin: auto;
@@ -22,10 +28,11 @@ section {
 
 p {
     margin: 0;
+    margin-bottom: 16px;
 }
 
 .onBack {
-    z-index: -1;
+    background: transparent;
 }
 
 .hidden {
@@ -36,6 +43,10 @@ p {
     cursor: pointer;
 }
 
+li em {
+    font-family: "Museo Sans Cyrl 700";
+}
+
 .content {
     padding: 0 100px 0 115px;
     line-height: 30px;
@@ -43,11 +54,18 @@ p {
     font-size: 25px;
 }
 
+.content ul {
+    padding: 0 0 0 20px;
+    margin: 0;
+}
+
 .content h2 {
     font-size: 28px;
     text-align: left;
     line-height: 40px;
     font-family: "Museo Sans Cyrl 900";
+    margin-bottom: 15px;
+    margin-top: 30px;
 }
 
 .content h3 {
@@ -56,7 +74,6 @@ p {
     line-height: 80px;
     margin-top: 150px;
     font-family: "Museo Sans Cyrl 900";
-
 }
 
 .topmenu {
@@ -64,6 +81,7 @@ p {
     justify-content: space-between;
     max-width: 1360px;
     margin: auto;
+    box-sizing: border-box;
 }
 
 .topmenu_elements {
@@ -73,7 +91,6 @@ p {
 }
 
 .menu_element {
-    flex-grow: 1;
     text-align: center;
     padding: 55px 0 40px 0;
 }
@@ -91,7 +108,7 @@ p {
     -moz-box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 0.25);
     display: block;
-    margin-bottom: 90px;
+    margin-bottom: 98px;
 }
 
 .mainText {
@@ -111,15 +128,16 @@ p {
 
 .button {
     margin: auto;
-    border: 3px solid #009e12;
-    padding: 3px;
+    border: 6px solid #009e12;
+    padding: 5px;
+    background: #fff;
 }
 
 .button a {
     color: #fff;
     text-decoration: none;
     background-color: #009e12;
-    padding: 10px 5px;
+    padding: 20px;
     display: block;
     font-size: 31px;
     font-family: "Museo Sans Cyrl 700";
@@ -144,7 +162,7 @@ p {
 
 .caption .text {
     color: #009e12;
-    text-shadow: 2px -2px 0px rgba(0, 0, 0, 1);
+    text-shadow: 4px -4px 0px rgba(0, 0, 0, 1);
     font-size: 124px;
     display: block;
     line-height: 65px;
@@ -193,7 +211,7 @@ p {
 .elementCaption {
     font-family: "Museo Sans Cyrl 900";
     font-size: 83px;
-    /* FIXME: shadow */
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
 }
 
 .elementsSmall .elementCaption {
@@ -239,6 +257,10 @@ p {
 
 .thumb {
     box-shadow: 0px 0px 10px 6px #404040;
+    flex-grow: 1;
+    margin: 10px;
+    background-size: contain;
+    z-index: 1;
 }
 
 .thumb.active {
@@ -288,40 +310,59 @@ p {
     padding-top: 50px;
     padding-bottom: 75px;
     color: #fff;
-        margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 #contacts h2 {
-  font-size: 71px;
-margin: 0;
-line-height: 71px;
-margin-bottom: 50px;
-font-family: "Museo Sans Cyrl 900";
+    font-size: 71px;
+    margin: 0;
+    line-height: 71px;
+    margin-bottom: 50px;
+    font-family: "Museo Sans Cyrl 900";
 }
 
 .offices {
     display: flex;
     justify-content: space-between;
-
 }
+
 .office.china {
     margin-right: 140px;
 }
-.office.rus{
-  flex-grow: 1;
+
+.office.rus {
+    flex-grow: 1;
 }
+
 .country {
-  font-size: 53px;
-  font-weight: 600;
-  line-height: 50px;
-  margin-bottom: 30px;
-  font-family: "Museo Sans Cyrl 700";
+    font-size: 53px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 30px;
+    font-family: "Museo Sans Cyrl 700";
 }
 
 .location {
     font-size: 27px;
 }
+
 .tel {
     font-weight: 600;
     margin-bottom: 25px;
+}
+
+@media screen and (max-width:1024px) {
+    .content {
+        padding: 0 20px;
+    }
+    .elementText {
+        bottom: 25px;
+        left: 20px;
+    }
+    .elementCaption {
+        font-size: 53px;
+    }
+    .elementDescription {
+        font-size: 26px;
+    }
 }

@@ -3,8 +3,15 @@ $(function(f) {
     f(window).scroll(function() {
         element['fade' + (f(this).scrollTop() > 900 ? 'In' : 'Out')](500);
     });
+    $('.thumb').each(function(){
+      $(this).css('width',$(this).height());
+    })
 });
-
+$(window).resize(function(){
+  $('.thumb').each(function(){
+    $(this).css('width',$(this).height());
+  });
+});
 $(document).ready(function() {
 
     var menu_selector = ".topmenu_elements"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
